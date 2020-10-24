@@ -1,8 +1,6 @@
 library("dplyr")
 library("ggplot2")
 
-print(snakemake@wildcards[["cluster"]])
-
 name <- snakemake@wildcards[["cluster"]]
 data <- read.csv(file = snakemake@input[[1]])
 

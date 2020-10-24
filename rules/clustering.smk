@@ -19,7 +19,6 @@ rule clustering_louvain:
 		genes = config["clustering"]["genes_to_vis"],
 		subclustering = config["clustering"]["subclustering"],
 		clustering_resolution = config["clustering"]["clustering_resolution"],
-		#subclustering_resolution = config["clustering"]["subclustering_resolution"]
 	script:
 		"../scripts/clustering.py"
 
@@ -41,7 +40,8 @@ rule specter:
 	
 rule clustering_specter:
         input:
-                expand("file_dir/post_vis_data_{downsampling}.h5ad", downsampling=config["downsampling"]["downsampling_method"])
+                expand("file_dir/post_vis_data_{downsampling}.h5ad", downsampling=config["downsampling"]["downsampling_method"]),
+                "file_dir/specter_clustering.csv"
         output:
                 "file_dir/post_clustering_specter.h5ad",
                 "file_dir/annotation_list_specter.npy",
@@ -60,7 +60,6 @@ rule clustering_specter:
                 genes = config["clustering"]["genes_to_vis"],
                 subclustering = config["clustering"]["subclustering"],
                 clustering_resolution = config["clustering"]["clustering_resolution"],
-                #subclustering_resolution = config["clustering"]["subclustering_resolution"]
         script:
                 "../scripts/clustering_specter.py"
 

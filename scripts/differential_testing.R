@@ -63,17 +63,9 @@ result_ent[,FDR:=p.adjust(`Pr(>Chisq)`, 'fdr')]
 ent_de = result_ent[result_ent$FDR<as.numeric(snakemake@config[["differential_testing"]][["DE_threshold"]]),, drop=F]
 ent_de = ent_de[order(ent_de$FDR),]
 
-print("hier kommt DE_threshold")
-print(as.numeric(snakemake@config[["differential_testing"]][["DE_threshold"]]))
-#ent_all = result_ent[order(result_ent$FDR),]
-
 name_of_csv = paste("results/",name,"_diff_testing.csv", sep="")
 write.csv(ent_de, name_of_csv, row.names=FALSE)
 
-#name_of_csv2 = paste("results/",name,"_diff_testing.csv", sep="")
-#write.csv(ent_all,name_of_csv2, row.names=FALSE)
-
-print("done mit einem Durchlauf")
 }
 
 
