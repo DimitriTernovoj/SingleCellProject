@@ -1,0 +1,11 @@
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bioconductor-singlecellexperiment
+  - bioconductor-mast
+  - r-seurat==3.2.0
+  - bioconductor-scater
+  - r-hdf5r
+  - bioconductor-rhdf5

@@ -1,0 +1,3 @@
+[submodule "scripts/Specter"]
+	path = scripts/Specter
+	url = https://github.com/canzarlab/Specter

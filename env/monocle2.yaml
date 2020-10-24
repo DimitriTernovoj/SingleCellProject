@@ -1,0 +1,8 @@
+channels: 
+  - bioconda
+  - conda-forge
+dependencies:
+  - bioconductor-monocle
+  - bioconductor-biobase
+  - r-rcolorbrewer
+  - r-base

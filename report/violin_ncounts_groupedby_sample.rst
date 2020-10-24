@@ -1,0 +1,1 @@
+Anzahl der Counts pro Zelle aufgeteilt nach den Samples aus denen die Zellen stammen. Die Punkte stellen dabei die einzelnen Zellen dar und die Kurven links und rechts der Punkte die Verteilungen innerhalb der Samples.

@@ -1,0 +1,68 @@
+#User settings:
+
+data:
+  samples: "" #path to the samples-file
+  units: "" #path to the units-file
+
+general:
+  amount_of_hvgs: "" #amount of highly variable genes used in the analysis
+
+preprocessing:
+  path_to_bamtofastq: "" #path to the bamtofastq program 
+  path_to_cellranger: "" #path to the cellranger program
+  path_to_ref: "" #path to the reference genome used
+
+
+quality_control:
+  cells: #filter of cells
+    upper_quantile_counts: "0.95"  #maximum counts per cell; use one parameter, leave the other as ""
+    max_counts: ""
+ 
+    lower_quantile_counts: "0.05"  #minimum counts per cell; use one paramter, leave the other as "" 
+    min_counts: ""
+ 
+    lower_quantile_genes: "0.05" #minimum amount of genes per cell; use one, leave the other as ""
+    min_genes: ""
+ 
+    mt_frac: "" #maximum proportion of mitochondrial genes per cell
+
+  genes:
+    min_cells: "" #minimum amount of cells a gene has to be expressed in
+
+downsampling:
+  downsampling_method: "normal" #options: "sphetcher" or "normal"; "normal" =  no downsampling
+  path_to_sphetcher: "" #path to sphetchers src-folder (only used if downsampling_method = "sphetcher")
+  sketch_size: "" #amount of cells after downsampling (only used if downsampling_method = "sphetcher")
+
+cell_cycle_scoring:
+  ref_genes: "" #used for visualization of cell cycle effects; tsv-file with 2 columns(s and g2m) defining cell cycle genes; OPTIONAL 
+
+clustering:
+  celltypes_markergenes: "" #known celltypes with their marker genes; tsv-file with 2 columns(celltype and markergenes), celltype definies a specific celltype & markergenes its markergenes as a list
+  genes_to_vis: ""   #genes that are visualized across the clustering; OPTIONAL
+  subclustering: ""    #options: "" or "True"; "" = no automatic subclustering
+  clustering_resolution: "0.5" #sensitivity parameter for the louvain-algorithm
+  cluster_method: "louvain" #options: "specter" or "louvain"; used algorithm for clustering
+
+specter: #parameters only used if clustering:cluster_method = "specter"
+  number_of_clusters: "8" #number of clusters in the final clustering
+  ensemble_size: "200" 
+  mingamma: "0.1"
+
+subclustering:
+  subclustering_resolution: "0.2" #sensitivity parameter for the lovain-algorithm
+  names_for_unannotated: "" #names to use for the unannotated clusters; OPTIONAL
+  further_subclusterings: "" #clusters to subcluster; OPTIONAL
+ 
+trajectory_inference:
+  clusters_to_include: "" #clusters that are used for trajectory inference; all clusters used if parameter is "" 
+  trajectory_start: "" #cluster thats the starting point of the trajectory; random cluster chosen if parameter is ""
+  trajectory_ending: "" #cluster thats the end point of the trajectory; random cluster chosen if parameter is ""
+
+differential_testing:
+  clusters: "" #clusters used for differential testing, if a subcluster is supposed to be tested: write cluster-0 instead of cluster,0; all clusters used if parameter is ""
+  DE_threshold: "0.01" #threshold for p-values of differentially expressed genes 
+
+gene_set_enrichment_analysis:
+  enrichment_threshold: "0.05" #threshold for p-values of enriched GO-terms  
+  organism: "" #analysed organism

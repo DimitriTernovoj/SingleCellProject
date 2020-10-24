@@ -1,0 +1,1 @@
+Die Graphik zeigt die spezifizierten Zelltypen auf der y-Achse und die Cluster auf der x-Achse. Die Werte in den Felder sagen aus, wie viel Prozent der festgelegten Markergene in den entsprechenden Clustern ebenfalls als Markergene bestimmt wurden.

@@ -1,0 +1,1 @@
+Visualisierung der Anzahl der Gene pro Zelle auf der y-Achse und die Anzahl der Counts pro Zelle auf der x-Achse. Die Farbe markiert den Anteil mitochondrialer Gene der Zelle und es sind nur Zellen abgebildete, deren Anzahl an Counts unter dem Median liegt.

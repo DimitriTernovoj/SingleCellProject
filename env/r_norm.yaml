@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - bioconductor-scran
+  - r==3.5.1
+  - r-base

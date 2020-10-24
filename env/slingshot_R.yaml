@@ -1,0 +1,16 @@
+channels:
+  - r
+  - bioconda
+  - conda-forge
+dependencies:
+  - r-rcolorbrewer
+  - bioconductor-slingshot
+  - bioconductor-singlecellexperiment==1.10.1
+  - r
+  - r-seurat
+  - bioconductor-scater
+  - bioconductor-clusterexperiment
+  - r-gam
+  - r-base
+  - r-hdf5r 
+  - bioconductor-rhdf5

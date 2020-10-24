@@ -1,0 +1,1 @@
+Darstellung der Varianzrate für die ersten Hauptkomponenten. Die Rate sagt dabei aus, wie groß der Anteil der Gesamtvarianz ist, der durch die einzelnen Hauptkomponenten erklärt wird. Als Grundlage dienen die Daten, bei denen nicht die Batch-Effekte korrigiert wurden.

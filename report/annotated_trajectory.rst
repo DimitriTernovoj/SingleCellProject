@@ -1,0 +1,1 @@
+Visualisierung der annotierten Trajektorie.

@@ -1,0 +1,1 @@
+Abgebildet ist die Dispersion der Gene in normalisierter und nicht-normalisierter Form in Abhängigkeit von den durchschnittlichen Expressionen der Gene. Stark variable Gene sind dabei durch die dunkle Farbe hervorgehoben.
