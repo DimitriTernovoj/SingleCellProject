@@ -35,8 +35,8 @@ rule specter:
                downsampling = "0" if config["downsampling"]["downsampling_method"] =="normal" else "1"
         shell:
                """
-               cd scripts/Specter/
-               matlab -r 'n_clusters={params.number_of_clusters};ensemble_size={params.ensemble_size};mingamma={params.mingamma};downsampling=string({params.downsampling});' < Specter_demo.m 
+               cd scripts/
+               matlab -r 'n_clusters={params.number_of_clusters};ensemble_size={params.ensemble_size};mingamma={params.mingamma};downsampling=string({params.downsampling});' < Specter.m 
                """
 	
 rule clustering_specter:
